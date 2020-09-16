@@ -1,6 +1,6 @@
 'use strcit'
 
-
+//HW BY KRAKEN
 
 //ПУНКТ 1
 
