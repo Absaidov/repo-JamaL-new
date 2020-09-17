@@ -1,132 +1,93 @@
 'use strcit'
 
 
+//ПУНКТ 2
 
-//ПУНКТ 1
-
-//пример 1
-//let a = 1, b = 1, c, d;
-//c = ++a;
-/* alert(c); // ответ: 2, так как оператор '++'  
-возвращает значение операнда с добавленной к нему единицей, при let a = 1,
- то с = 2
-
-
-//пример 2
-//d = b++;
-//alert(d); //ответ: 1, так как оператор '++' стоит после переменной,
-оператор возвращает значение операнда перед добавлением к нему единицы.
-
-d = 1; */
-
-
-//пример 3
-//c = 2 + ++a;
-//alert(c); //ответ: 5
-/* при а = 2 (выше решение задачи), с = 2 + (оператор добавляет операнду 'а
-единицу, то а будет равна 3, следовательно пример выглядит так
-с = 2 + 3, т.е. 5 )
-
-
-//пример 4
-/* d = 2 + b++; так как у нас стоит оператор после операнды, следовательно сначала
-вернется значение b = 2, d = 2 + 2;
-//alert(d); //ответ: 4
-
-//alert(a); //3 получили значение после решения примера 3
-//alert(b); //3 получили значание после решения примера 4
-
-
-
-//ПУНКТ 2 
-//let a = 2;
-//let x = 1 + (a *= 2);
-
-/* Х будет равен 5, так как, сначала решаем задачу в скобках, при а*= 2, 
-переменная А будет равна 4 (а = а * 2), при let a = 2, после прибавляем 1 */
+for (let i = 0; i <= 10; i++) {
+    if (i == 0) {
+        console.log(i + ' - Это ноль')
+    } else if (i % 2 == 0) {
+        console.log(i + " - Это четное число")
+    } else
+        console.log(i + ' - Это не четное число')
+}
 
 
 //ПУНКТ 3
 
-
-let a = 2;
-let b = 1;
-if (a >= 0 && b >= 0) {
-    console.log(a - b);
-
-} else if (a < 0 && b < 0) {
-    console.log(a * b);
+const post = {
+    author: "John", //вывести этот текст
+    postId: 23,
+    comments: [{
+            userId: 10,
+            userName: "Alex",
+            text: "lorem ipsum",
+            rating: {
+                likes: 10,
+                dislikes: 2 //вывести это число
+            }
+        },
+        {
+            userId: 5, //вывести это число
+            userName: "Jane",
+            text: "lorem ipsum 2", //вывести этот текст
+            rating: {
+                likes: 3,
+                dislikes: 1
+            }
+        },
+    ]
 }
+
+console.log(post.author);
+console.log(post.comments[0].rating.dislikes);
+console.log(post.comments[1].userId);
+console.log(post.comments[1].text);
+
 
 
 //ПУНКТ 4
+const products = [{
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
+];
+products.forEach(element => {
+    element.price = element.price - element.price * 0.15
 
+});
+console.log(products);
 
-/**
- * фукнция вычисляет сумму параметров .
- * @param {number} a пояснения для 'а'
- * @param {number} b пояснения для 'b'
- * @returns {number} пояснения для возвращаемого значения
- */
+//ПУНКТ 5
 
-function summ(a, b) {
-    return a + b;
-
-}
-
-
-/**
- * функция вычитает параметр a и b
- * @param {*} a пояснения для a
- * @param {*} b пояснения для b
- * @returns {number} пояснения для возвращаемого значения
- */
-function subtraction(a, b) {
-    return a - b;
-}
-
-
-
-/**
- * функция умножает парамет a и b
- * @param {*} a пояснения для a
- * @param {*} b пояснения ддя b
- * @returns {number} пояснения для возвращаемого значения
- */
-function multiplication(a, b) {
-    return a * b
-}
-
-/**
- * функция делит параметр a и b
- * @param {*} a пояснения для a
- * @param {*} b пояснения для b
- * @returns {number} пояснения для возвращаемого значения
- */
-function division(a, b) {
-    return a / b
-}
-
-// ПУНКТ 5
-/**
- * Фукнция получает числа и производит над ними операции 
- * @param {number} arg1 
- * @param {number} arg2 
- * @param {string} operation может быть "+" "-" "*" "/";
- */
-function mathOperation(arg1, arg2, operation) {
-    switch (operation) {
-        case '+':
-            return summ(arg1, arg2);
-        case '-':
-            return subtraction(arg1, arg2);
-        case '*':
-            return multiplication(arg1, arg2);
-        case '/':
-            return division(arg1, arg2);
-    }
-
-    //сдаю домашнее задание через GitKraken
-
-
-}
+const products = [{
+        id: 3,
+        price: 127,
+        photos: [
+            "1.jpg", "2.jpg",
+        ]
+    },
+    {
+        id: 5,
+        price: 499,
+        photos: []
+    },
+    {
+        id: 10,
+        price: 26,
+        photos: [
+            "3.jpg"
+        ]
+    }, {
+        id: 8,
+        price: 78,
+    },
+];
