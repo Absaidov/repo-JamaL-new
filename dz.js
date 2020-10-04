@@ -1,4 +1,4 @@
-'use strcit'
+'use strict',
 //пункт 1
 function getNumber(num) {
     if (!Number.isInteger(num) || num < 0 || num > 999) {
@@ -11,6 +11,7 @@ function getNumber(num) {
         hundreds: Math.floor(num / 100),
     }
 }
+
 
 
 
